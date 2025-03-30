@@ -1,0 +1,19 @@
+{% extends 'main.html'%}
+{% block content %}
+<center>
+    <div class="home">
+        {% for i in data %}
+        <div class="data">
+            <h1>{{ i.post }}</h1>
+            <h2>{{i.caption}}</h2>
+            <h4>
+            <a href="{% url 'edit' i.id %}">Edit</a>
+            <a href="{% url 'delete_' i.id %}">Delete</a></h4>
+            
+        </div>
+        {% endfor %}
+    
+    </div>
+</center>
+
+{% endblock content %}

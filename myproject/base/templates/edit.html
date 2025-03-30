@@ -1,0 +1,15 @@
+{% block content %}
+<center>
+    <h1>Update Post</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="post">Post</label>
+        <input type="text" id="post" name="post" value="{{ data.post }}" required> <br>
+
+        <label for="caption">Caption</label>
+        <input type="text" id="caption" name="caption" value="{{ data.caption }}" required> <br>
+
+        <input type="submit" value="Save">
+    </form>
+</center>
+{% endblock content %}

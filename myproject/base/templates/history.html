@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+  <center>
+    <h1>All deleted Post</h1>
+    {% for i in his %}
+    
+
+    <div class="delete">
+        <h1>{{i.post}} </h1>
+        <h2> {{i.caption}}</h2>
+      <h2><a href="{% url 'restore' i.id %}">Restore Post</a> <br>
+        <a href="{% url 'delete from history' i.id %}">delete from history</a></h2>
+    
+
+    </div>
+
+{% endfor %}
+
+  </center>
+
+{% endblock content %}
